@@ -1,3 +1,3 @@
 # NiFei
 
-[点击预览](https://pwddh.ujuji.com)
+[优聚集](https://pwddh.ujuji.com)
