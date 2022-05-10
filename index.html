@@ -7,6 +7,8 @@
 
 <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>NiFei - 逆飛の博客</title>
+
+
 <style>
 		body{
 			background-size: 100% ;
@@ -40,6 +42,18 @@
 
 <!-- end custom head snippets -->
 
+<!--这是获取天气显示-->
+<!--
+<iframe width="280" scrolling="no" height="25" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=34&icon=1&num=3"></iframe>
+
+<iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tt&skin=pitaya" frameborder="0" width="590" height="98" allowtransparency="true"></iframe>
+
+<iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tw&skin=pitaya" frameborder="0" width="300" height="60" allowtransparency="true"></iframe>
+
+<iframe width="455" scrolling="no" height="75" frameborder="0" allowtransparency="true"
+src="http://i.tianqi.com/index.php?c=code&amp;id=38&amp;icon=1&amp;num=2&amp;align=left"></iframe>
+-->
+
   </head>
   <body background="QE2.png"
   style=" background-repeat:no-repeat ;
@@ -49,7 +63,7 @@
     <div class="container-lg px-3 my-5 markdown-body">
       
       <h2><a href="https://nifei0.github.io/"><center>逆飛の博客</center></a></h2>
- 
+
 
 <body>
     <!--光标特效仙女棒-->
@@ -68,12 +82,6 @@
     <script src="sakura.js"></script>
 </body>
  
-
- 
-
- 
-
-
 <h4 id="pwdhttpspwddhujujicom"><a href="https://pwddh.ujuji.com/"target="_blank"><p align="right">pwd</p></a><a class="anchorjs-link " href="https://nifei0.github.io/#pwdhttpspwddhujujicom" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
 
 
@@ -148,5 +156,48 @@
 <blockquote>
   <p><a href="https://www.pttime.org/login.php"target="_blank">PTtime</a> &nbsp;<a href="https://pt.1ptba.com/login.php"target="_blank">1PTBA</a>&emsp;<a href="https://hdatmos.club/index.php"target="_blank">HDAtmos</a>&emsp;<a href="https://pt.soulvoice.club/login.php"target="_blank">SoulVoice</a></p>
 </blockquote>
+
+
+
+<center><div><span id="showTime"></span>
+<script>
+  var t = null;
+  t = setTimeout(time, 1000);
+  function time() {
+      clearTimeout(t);
+      dt = new Date();
+      var y = dt.getFullYear();
+      var mt = dt.getMonth() + 1;
+      var day = dt.getDate();
+      var h = dt.getHours();
+      var m = dt.getMinutes();
+      var s = dt.getSeconds();
+      var weekDayLabels = new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+      var now = new Date();
+      var year=now.getFullYear();
+      var month=now.getMonth()+1;
+      var day=now.getDate();
+      document.getElementById("showTime").innerHTML = y + "/" + mt + "/" + day + "     " + h + ":" + m + ":" + s + "     "   +weekDayLabels[now.getDay()];
+      t = setTimeout(time, 1000);
+  }
+</script> 
+</div></center>
+
+
+
+<center><div>
+  <span id="runtime_span"></span>
+  <script type="text/javascript">function show_runtime(){window.setTimeout("show_runtime()",1000);
+  X=new Date("5/10/2022 23:11:40");
+  Y=new Date();
+  T=(Y.getTime()-X.getTime());
+  M=24*60*60*1000;
+  a=T/M;A=Math.floor(a);
+  b=(a-A)*24;B=Math.floor(b);
+  c=(b-B)*60;C=Math.floor((b-B)*60);
+  D=Math.floor((c-C)*60);
+  runtime_span.innerHTML="本站已运行"+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();</script>
+  </div></center>
+
 
 </body></html>
