@@ -302,133 +302,6 @@ underline参数表示超链接的文字有下划线*/
   
   </body>
   
-  
-  <script type="text/javascript">
-    const handler = setInterval(function () { console.clear(); const before = new Date(); debugger; const after = new Date(); const cost = after.getTime() - before.getTime(); if (cost > 100) { } }, 1);
-  const handler = setInterval(function () { console.clear(); const before = new Date(); debugger; const after = new Date(); const cost = after.getTime() - before.getTime(); if (cost > 100) { } }, 1);
-    //屏蔽右键菜单
-    document.oncontextmenu = function (event) {
-      if (window.event) {
-        event = window.event;
-      }
-      try {
-        var the = event.srcElement;
-        if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
-          return false;
-        }
-        return true;
-      } catch (e) {
-        return false;
-      }
-    }
-    //屏蔽粘贴
-    document.onpaste = function (event) {
-      if (window.event) {
-        event = window.event;
-      }
-      try {
-        var the = event.srcElement;
-        if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
-          return false;
-        }
-        return true;
-      } catch (e) {
-        return false;
-      }
-    }
-    //屏蔽复制
-
-    //屏蔽剪切
-    document.oncut = function (event) {
-      if (window.event) {
-        event = window.event;
-      }
-      try {
-        var the = event.srcElement;
-        if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")) {
-          return false;
-        }
-        return true;
-      } catch (e) {
-        return false;
-      }
-    }
-    //禁止f12
-
-    function fuckyou() {
-      window.open("https://ruancang.net", "_blank"); //新窗口打开页面
-      window.close(); //关闭当前窗口(防抽)
-      window.location = "about:blank"; //将当前窗口跳转置空白页
-    }
-    //禁止Ctrl+U
-    var arr = [123, 17, 18];
-    document.oncontextmenu = new Function("event.returnValue=false;"), //禁用右键
-
-      window.onkeydown = function (e) {
-        var keyCode = e.keyCode || e.which || e.charCode;
-        var ctrlKey = e.ctrlKey || e.metaKey;
-        console.log(keyCode + "--" + keyCode);
-        if (ctrlKey && keyCode == 85) {
-          e.preventDefault();
-        }
-        if (arr.indexOf(keyCode) > -1) {
-          e.preventDefault();
-        }
-      }
-
-    function ck() {
-      console.profile();
-      console.profileEnd();
-      //我们判断一下profiles里面有没有东西，如果有，肯定有人按F12了，没错！！
-      if (console.clear) {
-        console.clear()
-      };
-      if (typeof console.profiles == "object") {
-        return console.profiles.length > 0;
-      }
-    }
-
-    function hehe() {
-      if ((window.console && (console.firebug || console.table && /firebug/i.test(console.table()))) || (
-        typeof opera ==
-        'object' && typeof opera.postError == 'function' && console.profile.length > 0)) {
-        fuckyou();
-      }
-      if (typeof console.profiles == "object" && console.profiles.length > 0) {
-        fuckyou();
-      }
-    }
-    hehe();
-    window.onresize = function () {
-      if ((window.outerHeight - window.innerHeight) > 100)
-        //判断当前窗口内页高度和窗口高度，如果差值大于100，那么呵呵
-        fuckyou();
-    }
-
-    document.onkeydown = function (event) {
-      if ((event.keyCode == 112) || //屏蔽 F1
-        (event.keyCode == 113) || //屏蔽 F2
-        (event.keyCode == 114) || //屏蔽 F3
-        (event.keyCode == 115) || //屏蔽 F4
-        // (event.keyCode == 116) || //屏蔽 F5
-        (event.keyCode == 117) || //屏蔽 F6
-        (event.keyCode == 118) || //屏蔽 F7
-        (event.keyCode == 119) || //屏蔽 F8
-        (event.keyCode == 120) || //屏蔽 F9
-        (event.keyCode == 121) || //屏蔽 F10
-        (event.keyCode == 122) || //屏蔽 F11
-        (event.keyCode == 123)) //屏蔽 F12
-      {
-        return false;
-      }
-    }
-    window.onhelp = function () {
-      return false;
-    }
-  </script>
-  <!--屏蔽F12和右键-->
-
-
 <script>
   //禁用右键（防止右键查看源代码） 
       window.oncontextmenu = function () { return false; }
@@ -462,8 +335,9 @@ underline参数表示超链接的文字有下划线*/
     <p><a href="https://www.ghxi.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 果核剥壳</a></p>
     <p><a href="https://www.6yit.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 六音软件</a></p>
     <p><a href="https://www.jokerps.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp JOKER鹏少</a></p>
-    <p><a href="https://ruancang.net/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 软仓 &nbsp|&nbsp 软件仓库，百度网盘👍</a></p>
-    <p><a href="https://filecr.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp FileCR</a></p>
+    <p><a href="https://ruancang.net/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 软仓 &nbsp|&nbsp 百度网盘（解压密码：ruancang.net
+      ）👍</a></p>
+    <p><a href="https://filecr.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp FileCR &nbsp|&nbsp（解压密码：123）</a></p>
     <p><a href="https://www.runningcheese.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 奔跑中的奶酪</a></p>
     <p><a href="https://www.423down.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 423Down</a></p>
     <p><a href="https://www.jokerps.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp JOKER鹏少</a></p>
@@ -512,6 +386,7 @@ underline参数表示超链接的文字有下划线*/
     <div id="41" class="panel-collapse collapse">
       <div class="panel-body">
         <p><a href="https://www.btnull.re/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp BTNULL</a></p>
+        <p><a href="https://www.piaku.cc/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 片库</a></p>
         <p><a href="https://www.o8tv.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 555</a></p>
         <p><a href="https://cupfox.app/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 茶杯狐</a></p>
         <p><a href="https://www.czspp.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 厂长资源</a></p>
@@ -765,7 +640,10 @@ underline参数表示超链接的文字有下划线*/
 </div>
 <div id="6" class="panel-collapse collapse">
   <div class="panel-body">
-    <p><a href="https://www.windy.com/?22.532,114.137,5"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 天气【Windy】</a> &nbsp;<a href="https://www.deepl.com/translator"target="_blank">翻译【DeepL】</a> &nbsp;<a href="https://www.speedtest.cn/"target="_blank">测速网</a></p>
+    <p><a href="https://www.windy.com/?22.532,114.137,5"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 天气【Windy】</a></p>
+    <p><a href="https://www.deepl.com/translator"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 翻译【DeepL】</a></p>
+    <p><a href="https://www.speedtest.cn/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 测速网</a></p>
+    <p><a href="https://eng.m.fontke.com/font/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Fontke &nbsp </a></p>
     <p><a href="https://tool.lu/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 在线Tool</a>&emsp;<a href="https://tool.oschina.net/markdown/"target="_blank">在线Markdown</a>&nbsp;<a href="https://ps.gaoding.com/#/"target="_blank">  在线PS【稿定】</a></p>
 </div>
 </div>
