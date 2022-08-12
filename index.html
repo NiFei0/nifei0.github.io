@@ -59,6 +59,7 @@ src="http://i.tianqi.com/index.php?c=code&amp;id=38&amp;icon=1&amp;num=2&amp;ali
   </head>
 
 
+
   <body 
 
   background="逆飛NiFei-bg.png";
@@ -185,7 +186,8 @@ src="http://i.tianqi.com/index.php?c=code&amp;id=38&amp;icon=1&amp;num=2&amp;ali
                      <li><a href=""><h3 id="iOS"><img src="音乐.png"width="25" height="25">Music</a>
                         <ul>
                           <li><a href=""><h4 id="MV">MV</a></li>
-                          <li><a href=""><h4 id="LIVE">LIVE</a></li>
+                          <li><a href=""><h4 id="LIVE">Beat</a></li>
+                          <li><a href=""><h4 id="LIVE">Live</a></li>
                           <li><a href=""><h4 id="Single">Single</a></li>
                           <!--<li><a href=""><h4 id="EP">EP</a></li>-->
                           <li><a href=""><h4 id="Album">Album</a></li>
@@ -300,6 +302,29 @@ underline参数表示超链接的文字有下划线*/
   
   </body>
 
+
+
+  <!--屏蔽F12和右键-->
+
+
+<script>
+  //禁用右键（防止右键查看源代码） 
+      window.oncontextmenu = function () { return false; }
+   //禁止任何键盘敲击事件（防止F12和shift+ctrl+i调起开发者工具） 
+      window.onkeydown = window.onkeyup = window.onkeypress = function () {
+        window.event.returnValue = false;
+   return false;
+      }
+   //如果用户在工具栏调起开发者工具，那么判断浏览器的可视高度和可视宽度是否有改变，如有改变则关闭本页面 
+   var h = window.innerHeight, w = window.innerWidth;
+      window.onresize = function () {
+   if (h != window.innerHeight || w != window.innerWidth) {
+          window.close();
+          window.location = "about:blank";
+        }
+      }
+  </script>
+
 <h4 id="nifei"><a href="http://nifei.ysepan.com/"target="_blank"><p align="right">NiFei &nbsp&nbsp&nbsp&nbsp&nbsp</p></a><a class="anchorjs-link " href="https://nifei0.github.io/#nifei" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
 
 <div class="panel-heading">
@@ -312,7 +337,9 @@ underline参数表示超链接的文字有下划线*/
 </div>
 <div id="collapseOne" class="panel-collapse collapse">
   <div class="panel-body">
-    <p><a href="https://www.ghxi.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 果核剥壳</a> <a href="https://www.6yit.com/"target="_blank">六音软件</a> <a href="https://www.jokerps.com/"target="_blank">JOKER鹏少</a></p>
+    <p><a href="https://www.ghxi.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 果核剥壳</a></p>
+    <p><a href="https://www.6yit.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 六音软件</a></p>
+    <p><a href="https://www.jokerps.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp JOKER鹏少</a></p>
   </div>
 </div>
 </div>
@@ -327,7 +354,11 @@ underline参数表示超链接的文字有下划线*/
 </div>
 <div id="2" class="panel-collapse collapse">
   <div class="panel-body">
-    <p><a href="https://weibo.com/vposy?is_all=1"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp vposy</a> &nbsp;<a href="https://www.mr-wu.cn/"target="_blank">吴川斌</a> &nbsp;<a href="https://www.axutongxue.com/"target="_blank">阿虚同学</a> &nbsp;<a href="https://ldtstore.com.cn/ldtools/"target="_blank">老弟一号</a></p>
+    <p><a href="https://weibo.com/vposy?is_all=1"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp vposy</a></p>
+    <p><a href="https://www.mr-wu.cn/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 吴川斌</a></p>
+    <p><a href="http://wuxianlin.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 吴宪林</a></p>
+    <p><a href="https://www.axutongxue.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 阿虚同学</a></p>
+    <p><a href="https://ldtstore.com.cn/ldtools/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 老弟一号</a></p>
   </div>
 </div>
 </div>
