@@ -453,12 +453,12 @@ underline参数表示超链接的文字有下划线*/
       <div class="panel-body">
         <p><a href="https://www.btnull.in/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="BTNULL.ico"width="20" height="20">&nbsp BTNULL</a></p>
         <p><a href="https://www.lyys8.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="凌云影视.ico"width="20" height="20">&nbsp 凌云影视</a></p>
-        <p><a href="https://www.o8tv.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="555.ico"width="20" height="20">&nbsp 555</a></p>
+        <p><a href="https://5seeu.vip/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="555.ico"width="20" height="20">&nbsp 555</a></p>
         <p><a href="https://cupfox.app/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="茶杯狐.png"width="20" height="20">&nbsp 茶杯狐</a></p>
         <p><a href="https://www.mozhatu.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="莫扎兔.png"width="20" height="20">&nbsp 莫扎兔</a></p>
         <p><a href="https://www.freeok.vip/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="FREEOK.png"width="20" height="20">&nbsp FREEOK</a></p>
         <p><a href="https://www.piaku.cc/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="片库.svg"width="20" height="20">&nbsp PIAKU</a></p>
-        <p><a href="https://www.cz4k.com/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="厂长资源.ico"width="20" height="20">&nbsp 厂长资源</a></p>
+        <p><a href="https://www.czys.pro/"target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="厂长资源.ico"width="20" height="20">&nbsp 厂长资源</a></p>
       </div>
     </div>
     
@@ -812,18 +812,38 @@ underline参数表示超链接的文字有下划线*/
 
 <center><div>
   <img src="电池.png"width="20" height="20"><span id="runtime_span"></span>
-  <script type="text/javascript">function show_runtime(){window.setTimeout("show_runtime()",1000);
-  X=new Date("12/8/2021 23:11:40");
-  Y=new Date();
-  T=(Y.getTime()-X.getTime());
-  M=24*60*60*1000;
-  a=T/M;A=Math.floor(a);
-  b=(a-A)*24;B=Math.floor(b);
-  c=(b-B)*60;C=Math.floor((b-B)*60);
-  D=Math.floor((c-C)*60);
-  F=A-365;
-  N=Math.floor(a/365);
-  runtime_span.innerHTML="本站已运行: "+N+"年"+F+"天"+B+"时"+C+"分"+D+"秒"}show_runtime();</script>
+  本站已经运行： <span id="sitetime" style="color:rgb(0, 0, 0)"></span>
+  <script>
+  function siteTime(){
+  window.setTimeout("siteTime()", 1000);
+  var seconds = 1000
+  var minutes = seconds * 60
+  var hours = minutes * 60
+  var days = hours * 24
+  var years = days * 365
+  var today = new Date()
+  var todayYear = today.getFullYear()
+  var todayMonth = today.getMonth()
+  var todayDate = today.getDate()
+  var todayHour = today.getHours()
+  var todayMinute = today.getMinutes()
+  var todaySecond = today.getSeconds()
+  var t1 = Date.UTC(2021,12,8,00,00,00)
+  var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond)
+  var diff = t2-t1
+  var diffYears = Math.floor(diff/years)
+  var diffDays = Math.floor((diff/days)-diffYears*365)
+  var diffHours =Math.floor((diff-(diffYears*365+diffDays)*days)/hours)
+  var diffMinutes =Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes)
+  var diffSeconds =Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds)
+  document.getElementById("sitetime").innerHTML=""+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒"
+  }
+  siteTime()
+  </script>
+
+
+  
+
   </div></center>
 
 
